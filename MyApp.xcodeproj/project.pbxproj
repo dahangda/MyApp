@@ -13,6 +13,7 @@
 		341BDF3A1F80DC2900D23D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341BDF391F80DC2900D23D90 /* Assets.xcassets */; };
 		341BDF3D1F80DC2900D23D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341BDF3B1F80DC2900D23D90 /* LaunchScreen.storyboard */; };
 		341BDF401F80DC2900D23D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDF3F1F80DC2900D23D90 /* main.m */; };
+		341BDF501F81363500D23D90 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDF4F1F81363500D23D90 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		341BDF3C1F80DC2900D23D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341BDF3E1F80DC2900D23D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341BDF3F1F80DC2900D23D90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		341BDF4E1F81363500D23D90 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "MyApp/Category/UIView+Frame.h"; sourceTree = SOURCE_ROOT; };
+		341BDF4F1F81363500D23D90 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "MyApp/Category/UIView+Frame.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				341BDF471F80F30D00D23D90 /* AppDelegate */,
+				341BDF4B1F81341900D23D90 /* Category */,
+				341BDF4A1F8133B700D23D90 /* Modules */,
 				341BDF331F80DC2900D23D90 /* ViewController.h */,
 				341BDF341F80DC2900D23D90 /* ViewController.m */,
 				341BDF391F80DC2900D23D90 /* Assets.xcassets */,
@@ -85,6 +90,22 @@
 				341BDF3B1F80DC2900D23D90 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Flie";
+			sourceTree = "<group>";
+		};
+		341BDF4A1F8133B700D23D90 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		341BDF4B1F81341900D23D90 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				341BDF4E1F81363500D23D90 /* UIView+Frame.h */,
+				341BDF4F1F81363500D23D90 /* UIView+Frame.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341BDF501F81363500D23D90 /* UIView+Frame.m in Sources */,
 				341BDF351F80DC2900D23D90 /* ViewController.m in Sources */,
 				341BDF401F80DC2900D23D90 /* main.m in Sources */,
 				341BDF321F80DC2900D23D90 /* AppDelegate.m in Sources */,
