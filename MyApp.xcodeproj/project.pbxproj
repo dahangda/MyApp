@@ -58,17 +58,33 @@
 		341BDF2F1F80DC2900D23D90 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				341BDF301F80DC2900D23D90 /* AppDelegate.h */,
-				341BDF311F80DC2900D23D90 /* AppDelegate.m */,
+				341BDF471F80F30D00D23D90 /* AppDelegate */,
 				341BDF331F80DC2900D23D90 /* ViewController.h */,
 				341BDF341F80DC2900D23D90 /* ViewController.m */,
-				341BDF361F80DC2900D23D90 /* Main.storyboard */,
 				341BDF391F80DC2900D23D90 /* Assets.xcassets */,
-				341BDF3B1F80DC2900D23D90 /* LaunchScreen.storyboard */,
-				341BDF3E1F80DC2900D23D90 /* Info.plist */,
-				341BDF3F1F80DC2900D23D90 /* main.m */,
+				341BDF481F80F38B00D23D90 /* Supporting Flie */,
 			);
 			path = MyApp;
+			sourceTree = "<group>";
+		};
+		341BDF471F80F30D00D23D90 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				341BDF301F80DC2900D23D90 /* AppDelegate.h */,
+				341BDF311F80DC2900D23D90 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		341BDF481F80F38B00D23D90 /* Supporting Flie */ = {
+			isa = PBXGroup;
+			children = (
+				341BDF361F80DC2900D23D90 /* Main.storyboard */,
+				341BDF3E1F80DC2900D23D90 /* Info.plist */,
+				341BDF3F1F80DC2900D23D90 /* main.m */,
+				341BDF3B1F80DC2900D23D90 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Flie";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = MyApp/Info.plist;
+				INFOPLIST_FILE = "MyApp/Supporting Flie/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yhpantanty.bool-part.MyApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = MyApp/Info.plist;
+				INFOPLIST_FILE = "MyApp/Supporting Flie/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yhpantanty.bool-part.MyApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
