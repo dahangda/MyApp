@@ -10,10 +10,10 @@
 /**
  设置／获取视图的位置，尺寸
  */
-#pragma mark ponit
+
 
 @interface UIView (Frame)
-
+#pragma mark ponit---位置相关
 @property (nonatomic,assign) CGFloat x;
 
 @property (nonatomic,assign) CGFloat y;
@@ -26,7 +26,7 @@
 
 @property (nonatomic,assign) CGPoint origin;
 
-#pragma mark size
+#pragma mark size---尺寸相关
 
 @property (nonatomic,assign) CGFloat width;
 

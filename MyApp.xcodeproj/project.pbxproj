@@ -14,6 +14,7 @@
 		341BDF3D1F80DC2900D23D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341BDF3B1F80DC2900D23D90 /* LaunchScreen.storyboard */; };
 		341BDF401F80DC2900D23D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDF3F1F80DC2900D23D90 /* main.m */; };
 		341BDF501F81363500D23D90 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDF4F1F81363500D23D90 /* UIView+Frame.m */; };
+		341BDF711F82867D00D23D90 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDF701F82867D00D23D90 /* NSString+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,14 @@
 		341BDF3C1F80DC2900D23D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341BDF3E1F80DC2900D23D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341BDF3F1F80DC2900D23D90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		341BDF4E1F81363500D23D90 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "MyApp/Category/UIView+Frame.h"; sourceTree = SOURCE_ROOT; };
-		341BDF4F1F81363500D23D90 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "MyApp/Category/UIView+Frame.m"; sourceTree = SOURCE_ROOT; };
+		341BDF4E1F81363500D23D90 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "MyApp/Category/UIView/UIView+Frame.h"; sourceTree = SOURCE_ROOT; };
+		341BDF4F1F81363500D23D90 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "MyApp/Category/UIView/UIView+Frame.m"; sourceTree = SOURCE_ROOT; };
+		341BDF691F82699800D23D90 /* YHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMacro.h; sourceTree = "<group>"; };
+		341BDF6F1F82867D00D23D90 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		341BDF701F82867D00D23D90 /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		342AD14E1F82988A00EFBAF2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		342AD1501F829B8F00EFBAF2 /* URLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacro.h; sourceTree = "<group>"; };
+		342AD1511F829C2D00EFBAF2 /* ThirdMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 			children = (
 				341BDF471F80F30D00D23D90 /* AppDelegate */,
 				341BDF4B1F81341900D23D90 /* Category */,
+				341BDF5E1F82670A00D23D90 /* Macro */,
 				341BDF4A1F8133B700D23D90 /* Modules */,
 				341BDF331F80DC2900D23D90 /* ViewController.h */,
 				341BDF341F80DC2900D23D90 /* ViewController.m */,
@@ -88,6 +96,7 @@
 				341BDF3E1F80DC2900D23D90 /* Info.plist */,
 				341BDF3F1F80DC2900D23D90 /* main.m */,
 				341BDF3B1F80DC2900D23D90 /* LaunchScreen.storyboard */,
+				342AD14E1F82988A00EFBAF2 /* PrefixHeader.pch */,
 			);
 			path = "Supporting Flie";
 			sourceTree = "<group>";
@@ -102,10 +111,38 @@
 		341BDF4B1F81341900D23D90 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				341BDF6E1F82863F00D23D90 /* NSString */,
+				341BDF6D1F82861400D23D90 /* UIView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		341BDF5E1F82670A00D23D90 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				341BDF691F82699800D23D90 /* YHMacro.h */,
+				342AD1501F829B8F00EFBAF2 /* URLMacro.h */,
+				342AD1511F829C2D00EFBAF2 /* ThirdMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		341BDF6D1F82861400D23D90 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
 				341BDF4E1F81363500D23D90 /* UIView+Frame.h */,
 				341BDF4F1F81363500D23D90 /* UIView+Frame.m */,
 			);
-			path = Category;
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		341BDF6E1F82863F00D23D90 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				341BDF6F1F82867D00D23D90 /* NSString+Base64.h */,
+				341BDF701F82867D00D23D90 /* NSString+Base64.m */,
+			);
+			path = NSString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +220,7 @@
 				341BDF351F80DC2900D23D90 /* ViewController.m in Sources */,
 				341BDF401F80DC2900D23D90 /* main.m in Sources */,
 				341BDF321F80DC2900D23D90 /* AppDelegate.m in Sources */,
+				341BDF711F82867D00D23D90 /* NSString+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
