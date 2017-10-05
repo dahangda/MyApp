@@ -12,8 +12,8 @@
 #define prefix  YH
 
 //字体
-#define YHFont(x)  [UIFont systemFontOfsize:x]
-#define YHBoldFont(x)  [UIFont boldSystemFontOfsize:x]
+#define YHFont(x)  [UIFont systemFontOfSize:x]
+#define YHBoldFont(x)  [UIFont boldSystemFontOfSize:x]
 //颜色
 #define YHRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define YHcolor [UIColor blueColor]
@@ -62,4 +62,12 @@
 #define YHCacheDir [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
 #define YHDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define YHTempDir NSTemporaryDirectory()
+
+//获取系统对象
+#define YHApplication        [UIApplication sharedApplication]
+#define YHAppWindow          [UIApplication sharedApplication].delegate.window
+#define YHAppDelegate        [UIApplication sharedApplication].delegate
+#define YHRootViewController [UIApplication sharedApplication].delegate.window.rootViewController
+#define YHUserDefaults       [NSUserDefaults standardUserDefaults]
+#define YHNotificationCenter [NSNotificationCenter defaultCenter]
 #endif /* YHMacro_h */

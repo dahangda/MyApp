@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YHAdPagesView.h"
 
 @interface ViewController : UIViewController
 
