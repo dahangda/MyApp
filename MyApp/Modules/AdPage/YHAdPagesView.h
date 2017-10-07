@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 typedef void(^TapBlock)(void);
 @interface YHAdPagesView : UIView
+
 - (instancetype)initWithFrame:(CGRect)frame andTap:(TapBlock)block;
 
 

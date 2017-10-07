@@ -7,9 +7,10 @@
 //
 
 #import "YHAdPagesView.h"
- NSString const *adImageName = @"adImageName";
+ NSString  *adImageName = @"adImageName";
  NSString const *adImageUrl = @"adImageUrl";
 static int btn_time = 5;
+int count = 5;
 
 @interface YHAdPagesView()
 /** 广告页存放图片 */
@@ -18,28 +19,35 @@ static int btn_time = 5;
 @property(nonatomic,strong) UIButton * adButton;
 /** 定时器 */
 @property(nonatomic,strong) NSTimer * countTimer;
-//临时减量
-@property(nonatomic,assign) NSInteger count;
+
 //图片路径
 @property(nonatomic,strong) NSString * fliePath;
 //点击跳转block
 @property(nonatomic,copy)TapBlock tapblock;
-
+//广告view的尺寸
+@property(nonatomic,assign) CGRect adFrame;
 
 
 @end
 
 @implementation YHAdPagesView
-- (instancetype)initWithFrame:(CGRect)frame andTap:(TapBlock)block
-{
-    if (self = [super initWithFrame:frame])
-    {
-//        广告图片view
-        _adView = [[UIImageView alloc] initWithFrame:frame];
+
+-(UIImageView*)adView{
+    //广告图片view
+    if (!_adView) {
+        _adView = [[UIImageView alloc] initWithFrame:self.adFrame];
         _adView.userInteractionEnabled = YES;
         _adView.contentMode = UIViewContentModeScaleToFill;
         UIGestureRecognizer *tap = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(pushAd)];
         [_adView addGestureRecognizer:tap];
+        
+    }
+  return _adView;
+}
+
+-(UIButton *)adButton{
+    if (!_adButton) {
+        //广告页上的跳转按钮
         
         float btn_w = 40;
         float btn_h =30;
@@ -48,16 +56,27 @@ static int btn_time = 5;
         _adButton.layer.cornerRadius = 4;
         _adButton.backgroundColor = YHRGBAColor(40, 40, 40, 0.6);
         
-        
         [_adButton setTitle:[NSString stringWithFormat:@"跳过%d",btn_time] forState: UIControlStateNormal];
         _adButton.titleLabel.font = [UIFont systemFontOfSize:12];
-        _count = btn_time;
+    }
+    return _adButton;
+}
+
+
+- (NSTimer *)countTimer{
+    if (!_countTimer) {
+        _countTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+    }
+    return _countTimer;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame andTap:(TapBlock)block
+{
+    if (self = [super initWithFrame:frame])
+    {
+        self.adFrame = frame;
         [self addSubview:self.adView];
         [self addSubview:self.adButton];
-        
-        _countTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
-        
-        
         NSString *filePath = [self getFilePathWithImageName:[YHUserDefaults valueForKey:adImageName]];
         BOOL isExist = [self isFileExistWithFilePath:filePath];
         if (isExist) {
@@ -66,7 +85,8 @@ static int btn_time = 5;
             self.tapblock = block;
             [self show];
         }
-        
+        else
+            [self dismiss];
         
             [self getAdvertisingImage];
        
@@ -107,7 +127,7 @@ static int btn_time = 5;
 
 - (void)show{
     
-    [[NSRunLoop mainRunLoop ] addTimer:_countTimer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop ] addTimer:self.countTimer forMode:NSRunLoopCommonModes];
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self];
@@ -208,9 +228,9 @@ static int btn_time = 5;
 
 -(void)countDown{
     
-    _count--;
-    [_adButton setTitle:[NSString stringWithFormat:@"跳过%ld",_count] forState:UIControlStateNormal];
-    if (_count<=0) {
+    count--;
+    [_adButton setTitle:[NSString stringWithFormat:@"跳过%ld",count] forState:UIControlStateNormal];
+    if (count<=0) {
         [self dismiss];
         
     }
