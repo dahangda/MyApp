@@ -8,10 +8,18 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#import "YHMacro.h"
-#import "UIView+Frame.h"
+
+/*第三方工具
+ */
 #import "AFNetworking.h"
 #import "Masonry.h"
+#import "MBProgressHUD.h"
+
+/*基础类
+ */
+#import "AppDelegate+AppSever.h"
+#import "YHMacro.h"
+#import "UIView+Frame.h"
 
 
 //#import <MJExtension/MJExtension.h>

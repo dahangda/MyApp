@@ -63,11 +63,39 @@
 #define YHDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define YHTempDir NSTemporaryDirectory()
 
-//获取系统对象
+/*获取系统对象
+ */
 #define YHApplication        [UIApplication sharedApplication]
 #define YHAppWindow          [UIApplication sharedApplication].delegate.window
 #define YHAppDelegate        [UIApplication sharedApplication].delegate
 #define YHRootViewController [UIApplication sharedApplication].delegate.window.rootViewController
 #define YHUserDefaults       [NSUserDefaults standardUserDefaults]
 #define YHNotificationCenter [NSNotificationCenter defaultCenter]
+
+/*常用方法宏
+ */
+//通知的发送
+
+#define YHPostNotification(name,obj) [[NSNotificationCenter defaultCenter] postNotificationName:name object:obj];
+
+/*用户相关的
+ */
+
+//登录状态改变通知
+#define YHNotificationLoginStatusChange @"YloginStateChange"
+
+//自动登录成功
+#define YHNotificationAutoLoginSuccess @"YNotificationAutoLoginSuccess"
+
+//被踢下线
+#define YHNotificationOnKick @"YNotificationOnKick"
+
+/*网络状态
+ */
+
+//网络状态变化
+#define YHNotificationNetWorkStateChange @"YNotificationNetWorkStateChange"
+
 #endif /* YHMacro_h */
+
+
