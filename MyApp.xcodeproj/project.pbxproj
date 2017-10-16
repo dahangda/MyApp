@@ -17,11 +17,11 @@
 		342C721A1F89E62B00A957BC /* AppDelegate+AppSever.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72191F89E62A00A957BC /* AppDelegate+AppSever.m */; };
 		342C72221F8A74AE00A957BC /* YHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72211F8A74AE00A957BC /* YHTabBarViewController.m */; };
 		342C72281F8BC64800A957BC /* YHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72271F8BC64800A957BC /* YHTabBar.m */; };
-		342C722E1F8BC8EB00A957BC /* YHTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C722D1F8BC8EB00A957BC /* YHTabBarButton.m */; };
 		342C72311F8FB4CB00A957BC /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72301F8FB4CB00A957BC /* homeViewController.m */; };
 		342C72341F8FB51E00A957BC /* findTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72331F8FB51E00A957BC /* findTableViewController.m */; };
 		342C72371F8FB54C00A957BC /* meViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72361F8FB54C00A957BC /* meViewController.m */; };
 		342C723A1F8FB59A00A957BC /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72391F8FB59A00A957BC /* WebViewController.m */; };
+		342C72431F95026000A957BC /* YHTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72421F95026000A957BC /* YHTabBarItem.m */; };
 		7A7E72423C31DB3BFABC47E8 /* libPods-MyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F76878092C4D2DED3C6FD3E0 /* libPods-MyApp.a */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +50,6 @@
 		342C72211F8A74AE00A957BC /* YHTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBarViewController.m; sourceTree = "<group>"; };
 		342C72261F8BC64800A957BC /* YHTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTabBar.h; sourceTree = "<group>"; };
 		342C72271F8BC64800A957BC /* YHTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBar.m; sourceTree = "<group>"; };
-		342C722C1F8BC8EB00A957BC /* YHTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTabBarButton.h; sourceTree = "<group>"; };
-		342C722D1F8BC8EB00A957BC /* YHTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBarButton.m; sourceTree = "<group>"; };
 		342C722F1F8FB4CB00A957BC /* homeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		342C72301F8FB4CB00A957BC /* homeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		342C72321F8FB51E00A957BC /* findTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findTableViewController.h; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		342C72361F8FB54C00A957BC /* meViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = meViewController.m; sourceTree = "<group>"; };
 		342C72381F8FB59A00A957BC /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		342C72391F8FB59A00A957BC /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		342C72411F95026000A957BC /* YHTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTabBarItem.h; sourceTree = "<group>"; };
+		342C72421F95026000A957BC /* YHTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBarItem.m; sourceTree = "<group>"; };
 		A4279081E9974B94CA548270 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 		F06CC32669F742D03C0BCCC4 /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F76878092C4D2DED3C6FD3E0 /* libPods-MyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,8 +201,8 @@
 				342C72391F8FB59A00A957BC /* WebViewController.m */,
 				342C72261F8BC64800A957BC /* YHTabBar.h */,
 				342C72271F8BC64800A957BC /* YHTabBar.m */,
-				342C722C1F8BC8EB00A957BC /* YHTabBarButton.h */,
-				342C722D1F8BC8EB00A957BC /* YHTabBarButton.m */,
+				342C72411F95026000A957BC /* YHTabBarItem.h */,
+				342C72421F95026000A957BC /* YHTabBarItem.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -353,7 +353,6 @@
 			files = (
 				341BDF501F81363500D23D90 /* UIView+Frame.m in Sources */,
 				342C72171F84DCB500A957BC /* YHAdPagesView.m in Sources */,
-				342C722E1F8BC8EB00A957BC /* YHTabBarButton.m in Sources */,
 				342C72311F8FB4CB00A957BC /* homeViewController.m in Sources */,
 				342C72341F8FB51E00A957BC /* findTableViewController.m in Sources */,
 				342C72281F8BC64800A957BC /* YHTabBar.m in Sources */,
@@ -363,6 +362,7 @@
 				341BDF321F80DC2900D23D90 /* AppDelegate.m in Sources */,
 				342C72221F8A74AE00A957BC /* YHTabBarViewController.m in Sources */,
 				341BDF711F82867D00D23D90 /* NSString+Base64.m in Sources */,
+				342C72431F95026000A957BC /* YHTabBarItem.m in Sources */,
 				342C721A1F89E62B00A957BC /* AppDelegate+AppSever.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,3 @@
-//
 //  YHTabBar.m
 //  MyApp
 //
@@ -7,13 +6,14 @@
 //
 
 #import "YHTabBar.h"
-#import "YHTabBarButton.h"
+#import "YHTabBarItem.h"
 @interface YHTabBar()
 /** 被选择的按钮 */
 //
-@property(nonatomic,strong) YHTabBarButton * selButton;
+@property(nonatomic,strong) YHTabBarItem * selItem;
+
 /** TabBar图片背景 */
-//
+
 @property(nonatomic,strong) UIImageView * imageView;
 
 @end
@@ -27,20 +27,30 @@
     [self addSubview:imgView];
 }
 
+- (void)addTabBarItem:(UITabBarItem *)item
+{    YHTabBarItem * tabBarItem= [[YHTabBarItem alloc]init];
+    
+    tabBarItem.tabBarItem = item;
+    
+    [tabBarItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
+    
+    [self addSubview:tabBarItem];
+}
 
 
-
-- (void)btnClick:(YHTabBarButton *)btn{
+- (void)btnClick:(YHTabBarItem *)btn{
     
     
     // 响应代理方法 实现页面跳转
     if ([self.delegate respondsToSelector:@selector(ChangeSelectIndexFrom:to:)]) {
-        [self.delegate ChangeSelectIndexFrom:_selButton.tag to:btn.tag];
+        [self.delegate ChangeSelectIndexFrom:_selItem.tag to:btn.tag];
     }
     
+    
+
     // 设置按钮显示状态 并切换选中按钮
-    _selButton.enabled = YES;
-    _selButton = btn;
+    _selItem.enabled = YES;
+    _selItem = btn;
     btn.enabled = NO;
 }
 
