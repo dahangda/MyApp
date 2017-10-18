@@ -18,4 +18,7 @@
  *  TabBar item image ratio
  */
 @property (nonatomic, assign) CGFloat itemImageRatio;
+
+
+- (instancetype)initWithItemImageRatio:(CGFloat)itemImageRatio;
 @end

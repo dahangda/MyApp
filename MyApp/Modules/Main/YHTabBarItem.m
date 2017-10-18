@@ -10,13 +10,20 @@
 
 @implementation YHTabBarItem
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+#pragma mark ********************初始化方法比例
+
+- (instancetype)initWithItemImageRatio:(CGFloat)itemImageRatio {
+    
+    if (self = [super init]) {
+        
+        self.itemImageRatio = itemImageRatio;
+    }
+    return self;
 }
-*/
+
+#pragma mark ********************依照给的item设置内部
+
 - (void)setTabBarItem:(UITabBarItem *)tabBarItem {
     
     _tabBarItem = tabBarItem;
@@ -29,8 +36,10 @@
     //[self observeValueForKeyPath:nil ofObject:nil change:nil context:nil];
 }
 
+#pragma mark ********************kvo
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
+    self.titleLabel.font =YHFont(12);
     [self setTitle:self.tabBarItem.title forState:UIControlStateNormal];
     [self setImage:self.tabBarItem.image forState:UIControlStateNormal];
     [self setImage:self.tabBarItem.selectedImage forState:UIControlStateSelected];
@@ -46,7 +55,7 @@
     CGFloat imageY = 0.f;
     CGFloat imageW = contentRect.size.width;
     CGFloat imageH = contentRect.size.height * self.itemImageRatio;
-    
+    YHLog(@"%f",self.itemImageRatio);
     return CGRectMake(imageX, imageY, imageW, imageH);
 }
 
@@ -54,7 +63,9 @@
     
     CGFloat titleX = 0.f;
     CGFloat titleW = contentRect.size.width;
-    CGFloat titleY = contentRect.size.height * self.itemImageRatio + (self.itemImageRatio == 1.0f ? 100.0f : -5.0f);
+    CGFloat titleY = contentRect.size.height * (1-self.itemImageRatio);
+    YHLog(@"###%f###",contentRect.size.height);
+    YHLog(@"%f",titleY);
     CGFloat titleH = contentRect.size.height - titleY;
     
     return CGRectMake(titleX, titleY, titleW, titleH);

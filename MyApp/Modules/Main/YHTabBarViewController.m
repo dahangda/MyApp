@@ -24,16 +24,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupTabBar];
+//    [self setupTabBar];
    
-    self.TabBar.delegate = self;
-    [self.TabBar addImageView];
-    
     [self setupControllers];
     
     // Do any additional setup after loading the view.
 }
-
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+//    [self removeOriginControls];
+}
+#pragma mark ————— 取出系统自带的tabbar并把里面的按钮删除掉 —————
+- (void)removeOriginControls {
+    
+    [self.tabBar.subviews enumerateObjectsUsingBlock:^(__kindof UIView * obj, NSUInteger idx, BOOL * stop) {
+        
+        if ([obj isKindOfClass:[UIControl class]]) {
+            
+            [obj removeFromSuperview];
+        }
+    }];
+}
 #pragma mark ********************装载控制器
 
 -(void)setupControllers
@@ -43,16 +54,17 @@
     [self  configChildContrller:home tittile:@"首页" tabBarItemImage:(NSString *)@"tabBar_essence_icon" itemSelImage:@"tabBar_essence_click_icon"];
     
     WebViewController *web = [[WebViewController alloc]init];
-    [self configChildContrller:(UIViewController *)web tittile: @"发现"tabBarItemImage:@"" itemSelImage:@""];
+    [self configChildContrller:(UIViewController *)web tittile: @"灵感"tabBarItemImage:@"tabbar_icon_found_normal" itemSelImage:@"tabbar_icon_found_highlight"];
     
     findTableViewController *find = [[findTableViewController alloc]init];
-    [self configChildContrller:find tittile:@"发现" tabBarItemImage:@"" itemSelImage:@""];
+    [self configChildContrller:find tittile:@"发现" tabBarItemImage:@"tabBar_new_icon" itemSelImage:@"tabBar_new_click_icon"];
     
     meViewController *me = [[meViewController alloc]init];
-    [self configChildContrller:me tittile:@"我的" tabBarItemImage:@"" itemSelImage:@""];
+    [self configChildContrller:me tittile:@"我的" tabBarItemImage:@"tabbar_icon_me_normal" itemSelImage:@"tabbar_icon_me_highlight"];
     
     self.viewControllers = self.Controllers;
-    self.TabBar.itmeCount = _Controllers.count;
+    
+//    self.TabBar.itmeCount = _Controllers.count;
     
     
     
@@ -65,23 +77,28 @@
     vc.tabBarItem.title = tittle;//跟上面一样效果
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    [self.TabBar addTabBarItem:vc.tabBarItem];
+    //将vc的tabBaritem给TabBar
+//    [self.TabBar addTabBarItem:vc.tabBarItem];
     //包装导航控制器
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
     vc.title = tittle;
     [_Controllers addObject:nav];
 }
 #pragma mark ********************装载tabBar
-
-- (void)setupTabBar
-{
-    
-    YHTabBar *tabBar = [[YHTabBar alloc]init];
-    tabBar.frame = self.tabBar.bounds;
-    tabBar.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
-    _TabBar = tabBar;
-    [self.tabBar addSubview:tabBar];
-}
+//
+//- (void)setupTabBar
+//{
+//    
+//    YHTabBar *YHtabBar = [[YHTabBar alloc]init];
+//    YHtabBar.frame = self.tabBar.bounds;
+//    YHtabBar.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+//    _TabBar = YHtabBar;
+//    self.TabBar.itemImageRatio = 0.7;
+//    [self.tabBar addSubview:YHtabBar];
+//    
+//    self.TabBar.delegate = self;
+//    [self.TabBar addImageView];
+//}
 
 
 

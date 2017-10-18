@@ -16,14 +16,26 @@
 
 @end
 
+
+
 @interface YHTabBar : UIView
 /** 代理 */
 @property(nonatomic,weak) id<YHTabBarDelegate> delegate;
 /*多少个itme
  */
-//
-
 @property(nonatomic,assign) NSInteger itmeCount;
+
+/**
+ *  TabBar item image ratio
+ */
+@property (nonatomic, assign) CGFloat itemImageRatio;
+
+
+
+
+
+
+
 
 
 - (void)addImageView;
