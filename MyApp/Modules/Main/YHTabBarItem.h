@@ -10,13 +10,25 @@
 
 @interface YHTabBarItem : UIButton
 /** 存属性 */
-//
 @property(nonatomic,strong) UITabBarItem * tabBarItem;
+/**
+ *  TabBar item title color
+ */
+@property (nonatomic, strong) UIColor *itemTitleColor;
+/**
+ *  TabBar selected item title color
+ */
+@property (nonatomic, strong) UIColor *selectedItemTitleColor;
 
-
+/**
+*  TabBar item title font
+*/
+@property (nonatomic, strong) UIFont *itemTitleFont;
 /**
  *  TabBar item image ratio
  */
+
+
 @property (nonatomic, assign) CGFloat itemImageRatio;
 
 

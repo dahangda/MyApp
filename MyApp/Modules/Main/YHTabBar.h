@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YHTabBarItem.h"
 @protocol YHTabBarDelegate <NSObject>
 
 @optional
@@ -21,6 +21,7 @@
 @interface YHTabBar : UIView
 /** 代理 */
 @property(nonatomic,weak) id<YHTabBarDelegate> delegate;
+
 /*多少个itme
  */
 @property(nonatomic,assign) NSInteger itmeCount;
@@ -29,6 +30,20 @@
  *  TabBar item image ratio
  */
 @property (nonatomic, assign) CGFloat itemImageRatio;
+/**
+ *  TabBar item title color
+ */
+@property (nonatomic, strong) UIColor *itemTitleColor;
+
+/**
+ *  TabBar selected item title color
+ */
+@property (nonatomic, strong) UIColor *selectedItemTitleColor;
+
+/**
+ *  TabBar item title font
+ */
+@property (nonatomic, strong) UIFont *itemTitleFont;
 
 
 
