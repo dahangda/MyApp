@@ -64,7 +64,7 @@
         
         UIViewController *VC = (UIViewController *)obj;
         
-        UIImage *selectedImage = VC.tabBarItem.selectedImage;
+       UIImage *selectedImage = VC.tabBarItem.selectedImage;
         VC.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
         
@@ -83,7 +83,7 @@
     _Controllers = [[NSMutableArray alloc]init];
     
     homeViewController *home = [[homeViewController alloc]init];
-    [self  configChildContrller:home tittile:@"首页" tabBarItemImage:(NSString *)@"tabBar_essence_icon" itemSelImage:@"tabBar_essence_click_icon"];
+    [self  configChildContrller:home tittile:@"首页" tabBarItemImage:(NSString *)@"tabBar_essence_click_icon" itemSelImage:@"tabBar_essence_icon"];
     
     WebViewController *web = [[WebViewController alloc]init];
     [self configChildContrller:(UIViewController *)web tittile: @"灵感"tabBarItemImage:@"tabbar_icon_found_normal" itemSelImage:@"tabbar_icon_found_highlight"];
@@ -144,8 +144,13 @@
 
 
 - (void)ChangeSelectIndexFrom:(NSInteger)from to:(NSInteger)to
+
 {
+    //YHTabBarItem *selectItem = self.TabBar.items[to-1];
+    //selectItem.enabled = NO;
     self.selectedIndex = to-1;
+    
+    
 }
 
 

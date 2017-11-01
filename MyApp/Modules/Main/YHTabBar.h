@@ -44,7 +44,8 @@
  *  TabBar item title font
  */
 @property (nonatomic, strong) UIFont *itemTitleFont;
-
+/** 存放items **/
+@property(nonatomic,strong) NSMutableArray * items;
 
 
 

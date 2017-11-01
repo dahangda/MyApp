@@ -12,8 +12,7 @@
 @property(nonatomic,strong) UIImageView * imageView;
 /** 被选择的按钮 */
 @property(nonatomic,strong) YHTabBarItem * selItem;
-/** 存放items **/
-@property(nonatomic,strong) NSMutableArray * items;
+
 
 @end
 
@@ -48,7 +47,7 @@
     tabBarItem.selectedItemTitleColor = self.selectedItemTitleColor;
     tabBarItem.tabBarItem = item;
      
-    [tabBarItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
+    [tabBarItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:tabBarItem];
     [self.items addObject:tabBarItem];
     
@@ -73,11 +72,13 @@
     }
     
     // 设置按钮显示状态 并切换选中按钮
-    _selItem.enabled = YES;
+      btn.selected = YES;
+    
+    //_selItem.enabled = YES;
     _selItem.selected =NO;
     self.selItem = btn;
-    btn.enabled = NO;
-    btn.selected = YES;
+    //btn.enabled = NO;
+  
   
 
 }
