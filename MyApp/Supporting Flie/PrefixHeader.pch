@@ -9,17 +9,20 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-/*第三方工具
- */
-#import "AFNetworking.h"
-#import "Masonry.h"
-#import "MBProgressHUD.h"
-
 /*基础类
  */
 #import "AppDelegate+AppSever.h"
 #import "YHMacro.h"
 #import "UIView+Frame.h"
+#import "BaseViewController.h"
+
+/*第三方
+ */
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "MBProgressHUD.h"
+
+
 
 
 //#import <MJExtension/MJExtension.h>

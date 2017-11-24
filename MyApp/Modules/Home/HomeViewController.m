@@ -1,18 +1,18 @@
 //
-//  WebViewController.m
+//  HomeViewController.m
 //  MyApp
 //
-//  Created by 燕航 on 2017/10/12.
+//  Created by 燕航 on 2017/11/24.
 //  Copyright © 2017年 yanhang. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "HomeViewController.h"
 
-@interface WebViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation WebViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

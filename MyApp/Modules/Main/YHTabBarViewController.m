@@ -7,10 +7,10 @@
 //
 
 #import "YHTabBarViewController.h"
-#import "meViewController.h"
-#import "findTableViewController.h"
-#import "WebViewController.h"
-#import "homeViewController.h"
+#import "MeViewController.h"
+#import "FindTableViewController.h"
+#import "WKViewController.h"
+#import "HomeViewController.h"
 #import "YHTabBar.h"
 
 
@@ -25,10 +25,9 @@
 - (void)viewDidLoad {
  
     [super viewDidLoad];
-   [self setupTabBar];
-   
     [self setupControllers];
-    [self configTabBar];
+    [self setupTabBar];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -82,19 +81,18 @@
 {
     _Controllers = [[NSMutableArray alloc]init];
     
-    homeViewController *home = [[homeViewController alloc]init];
+    HomeViewController *home = [[HomeViewController alloc]init];
     [self  configChildContrller:home tittile:@"首页" tabBarItemImage:(NSString *)@"tabBar_essence_click_icon" itemSelImage:@"tabBar_essence_icon"];
     
-    WebViewController *web = [[WebViewController alloc]init];
+    WKViewController *web = [[WKViewController alloc]init];
     [self configChildContrller:(UIViewController *)web tittile: @"灵感"tabBarItemImage:@"tabbar_icon_found_normal" itemSelImage:@"tabbar_icon_found_highlight"];
     
-    findTableViewController *find = [[findTableViewController alloc]init];
+    FindTableViewController *find = [[FindTableViewController alloc]init];
     [self configChildContrller:find tittile:@"发现" tabBarItemImage:@"tabBar_new_icon" itemSelImage:@"tabBar_new_click_icon"];
     
-    meViewController *me = [[meViewController alloc]init];
+    MeViewController *me = [[MeViewController alloc]init];
     [self configChildContrller:me tittile:@"我的" tabBarItemImage:@"tabbar_icon_me_normal" itemSelImage:@"tabbar_icon_me_highlight"];
     
-   // self.viewControllers = self.Controllers;
     
   
     
@@ -138,7 +136,7 @@
     self.TabBar.itemTitleColor         = YHRGBColor(42, 42, 55);
     self.TabBar.selectedItemTitleColor =YHRGBColor(244, 0, 0);
     [self.tabBar addSubview:YHtabBar];
-    
+    [self configTabBar];
    
 }
 
@@ -146,10 +144,11 @@
 - (void)ChangeSelectIndexFrom:(NSInteger)from to:(NSInteger)to
 
 {
-    //YHTabBarItem *selectItem = self.TabBar.items[to-1];
-    //selectItem.enabled = NO;
+  YHTabBarItem *selectItem = self.TabBar.items[to-1];
+    YHTabBarItem *fromItem = self.TabBar.items[from -1];
+    selectItem.userInteractionEnabled=NO;
+    fromItem.userInteractionEnabled = YES;
     self.selectedIndex = to-1;
-    
     
 }
 

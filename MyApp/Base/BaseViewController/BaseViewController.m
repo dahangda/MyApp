@@ -1,24 +1,22 @@
 //
-//  homeViewController.m
+//  BaseViewController.m
 //  MyApp
 //
-//  Created by 燕航 on 2017/10/12.
+//  Created by 燕航 on 2017/11/24.
 //  Copyright © 2017年 yanhang. All rights reserved.
 //
 
-#import "homeViewController.h"
+#import "BaseViewController.h"
 
-@interface homeViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation homeViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    
+   
     // Do any additional setup after loading the view.
 }
 

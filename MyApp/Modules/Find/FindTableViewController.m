@@ -1,18 +1,18 @@
 //
-//  findTableViewController.m
+//  FindTableViewController.m
 //  MyApp
 //
-//  Created by 燕航 on 2017/10/12.
+//  Created by 燕航 on 2017/11/24.
 //  Copyright © 2017年 yanhang. All rights reserved.
 //
 
-#import "findTableViewController.h"
+#import "FindTableViewController.h"
 
-@interface findTableViewController ()
+@interface FindTableViewController ()
 
 @end
 
-@implementation findTableViewController
+@implementation FindTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

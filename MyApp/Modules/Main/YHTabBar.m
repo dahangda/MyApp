@@ -25,6 +25,13 @@
     return _items;
 }
 
+- (YHTabBarItem *)selItem{
+    if (_selItem == nil) {
+        _selItem = self.items[0];
+        _selItem.tag = 1;
+    }
+    return _selItem;
+}
 #pragma mark ********************bar背景图片
 
 - (void)addImageView
@@ -68,14 +75,14 @@
 
     // 响应代理方法 实现页面跳转
     if ([self.delegate respondsToSelector:@selector(ChangeSelectIndexFrom:to:)]) {
-        [self.delegate ChangeSelectIndexFrom:_selItem.tag to:btn.tag];
+        [self.delegate ChangeSelectIndexFrom:self.selItem.tag to:btn.tag];
     }
     
     // 设置按钮显示状态 并切换选中按钮
       btn.selected = YES;
     
     //_selItem.enabled = YES;
-    _selItem.selected =NO;
+    self.selItem.selected =NO;
     self.selItem = btn;
     //btn.enabled = NO;
   
