@@ -62,7 +62,8 @@
 - (void)initUserStatusManager{
     /*判断用户是否有过登录（用户个人信息里面），有的话直接跳转到登录主控制器，没有的话跳转到登录控制器(通过通知)
      */
-    UIViewController *vc = [YHTabBarViewController new];
+    YHTabBarViewController *vc = [YHTabBarViewController new];
+    self.mainTabBarController = vc;
    vc.view.backgroundColor = YHcolor;
     self.window.rootViewController = vc;
     
@@ -76,4 +77,7 @@
     
 }
 
++ (AppDelegate *)shareAppDelegate{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 @end

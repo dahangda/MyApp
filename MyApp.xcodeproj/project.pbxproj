@@ -17,6 +17,8 @@
 		342C72221F8A74AE00A957BC /* YHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72211F8A74AE00A957BC /* YHTabBarViewController.m */; };
 		342C72281F8BC64800A957BC /* YHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72271F8BC64800A957BC /* YHTabBar.m */; };
 		342C72431F95026000A957BC /* YHTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72421F95026000A957BC /* YHTabBarItem.m */; };
+		34768F911FC9603700998AD7 /* BaseUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34768F901FC9603700998AD7 /* BaseUINavigationController.m */; };
+		34768F951FCE89E000998AD7 /* YHAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 34768F941FCE89E000998AD7 /* YHAnimatedTransition.m */; };
 		34AC3D201FC80FFE008AF6C6 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D1F1FC80FFE008AF6C6 /* MeViewController.m */; };
 		34AC3D241FC81196008AF6C6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D231FC81196008AF6C6 /* BaseViewController.m */; };
 		34AC3D271FC813F0008AF6C6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D261FC813F0008AF6C6 /* ProfileViewController.m */; };
@@ -54,6 +56,11 @@
 		342C72271F8BC64800A957BC /* YHTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBar.m; sourceTree = "<group>"; };
 		342C72411F95026000A957BC /* YHTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTabBarItem.h; sourceTree = "<group>"; };
 		342C72421F95026000A957BC /* YHTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBarItem.m; sourceTree = "<group>"; };
+		34768F8F1FC9603700998AD7 /* BaseUINavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseUINavigationController.h; sourceTree = "<group>"; };
+		34768F901FC9603700998AD7 /* BaseUINavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseUINavigationController.m; sourceTree = "<group>"; };
+		34768F931FCE89E000998AD7 /* YHAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnimatedTransition.h; sourceTree = "<group>"; };
+		34768F941FCE89E000998AD7 /* YHAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnimatedTransition.m; sourceTree = "<group>"; };
+		34768F961FCEB95B00998AD7 /* YHTransitonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTransitonProtocol.h; sourceTree = "<group>"; };
 		34AC3D1C1FC80F5F008AF6C6 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		34AC3D1D1FC80F5F008AF6C6 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		34AC3D1E1FC80FFE008AF6C6 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -217,9 +224,30 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		34768F8E1FC95FB100998AD7 /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				34768F8F1FC9603700998AD7 /* BaseUINavigationController.h */,
+				34768F901FC9603700998AD7 /* BaseUINavigationController.m */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		34768F921FCE89AA00998AD7 /* AnimatedTransition */ = {
+			isa = PBXGroup;
+			children = (
+				34768F931FCE89E000998AD7 /* YHAnimatedTransition.h */,
+				34768F941FCE89E000998AD7 /* YHAnimatedTransition.m */,
+				34768F961FCEB95B00998AD7 /* YHTransitonProtocol.h */,
+			);
+			path = AnimatedTransition;
+			sourceTree = "<group>";
+		};
 		34AC3D171FC80E57008AF6C6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				34768F921FCE89AA00998AD7 /* AnimatedTransition */,
+				34768F8E1FC95FB100998AD7 /* BaseNavigationController */,
 				34AC3D211FC8115F008AF6C6 /* BaseViewController */,
 			);
 			path = Base;
@@ -447,12 +475,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34768F951FCE89E000998AD7 /* YHAnimatedTransition.m in Sources */,
 				342C72171F84DCB500A957BC /* YHAdPagesView.m in Sources */,
 				34AC3D2F1FC816DF008AF6C6 /* MeTableViewCell.m in Sources */,
 				342C72281F8BC64800A957BC /* YHTabBar.m in Sources */,
 				341BDF401F80DC2900D23D90 /* main.m in Sources */,
 				341BDF321F80DC2900D23D90 /* AppDelegate.m in Sources */,
 				34AC3D271FC813F0008AF6C6 /* ProfileViewController.m in Sources */,
+				34768F911FC9603700998AD7 /* BaseUINavigationController.m in Sources */,
 				34C67C391FC8094A007AAB63 /* FindTableViewController.m in Sources */,
 				342C72221F8A74AE00A957BC /* YHTabBarViewController.m in Sources */,
 				34AC3D321FC81709008AF6C6 /* HeaderView.m in Sources */,

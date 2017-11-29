@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YHTabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+/** 主要控制器 **/
+@property(nonatomic,strong) YHTabBarViewController * mainTabBarController;
 
 @end
 

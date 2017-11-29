@@ -67,7 +67,7 @@
  */
 #define YHApplication        [UIApplication sharedApplication]
 #define YHAppWindow          [UIApplication sharedApplication].delegate.window
-#define YHAppDelegate        [UIApplication sharedApplication].delegate
+#define YHAppDelegate        [AppDelegate shareAppDelegate]
 #define YHRootViewController [UIApplication sharedApplication].delegate.window.rootViewController
 #define YHUserDefaults       [NSUserDefaults standardUserDefaults]
 #define YHNotificationCenter [NSNotificationCenter defaultCenter]
