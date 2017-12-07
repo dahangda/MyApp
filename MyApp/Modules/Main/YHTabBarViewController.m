@@ -132,7 +132,7 @@
     YHtabBar.delegate = self;
     _TabBar = YHtabBar;
     self.TabBar.itemImageRatio = 0.7;
-    self.TabBar.itemTitleFont          = YHFont(10);
+    self.TabBar.itemTitleFont          = YHSYSTEMFONT(10);
     self.TabBar.itemTitleColor         = YHRGBColor(42, 42, 55);
     self.TabBar.selectedItemTitleColor =YHRGBColor(244, 0, 0);
     [self.tabBar addSubview:YHtabBar];

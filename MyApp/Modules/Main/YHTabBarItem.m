@@ -61,7 +61,7 @@
 - (void)setTabBarItem:(UITabBarItem *)tabBarItem {
     
     _tabBarItem = tabBarItem;
-    self.titleLabel.font =YHFont(14);
+    self.titleLabel.font =YHSYSTEMFONT(14);
     [self setTitle:tabBarItem.title forState:UIControlStateNormal];
     [self setImage:tabBarItem.image forState:UIControlStateNormal];
     [self setImage:tabBarItem.selectedImage forState:UIControlStateSelected ];

@@ -17,12 +17,14 @@
 		342C72221F8A74AE00A957BC /* YHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72211F8A74AE00A957BC /* YHTabBarViewController.m */; };
 		342C72281F8BC64800A957BC /* YHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72271F8BC64800A957BC /* YHTabBar.m */; };
 		342C72431F95026000A957BC /* YHTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C72421F95026000A957BC /* YHTabBarItem.m */; };
+		3441E81D1FD695E000FE76C6 /* SetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E81C1FD695E000FE76C6 /* SetingViewController.m */; };
 		34768F911FC9603700998AD7 /* BaseUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34768F901FC9603700998AD7 /* BaseUINavigationController.m */; };
 		34768F951FCE89E000998AD7 /* YHAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 34768F941FCE89E000998AD7 /* YHAnimatedTransition.m */; };
+		34768F9A1FD5312600998AD7 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 34768F991FD5312600998AD7 /* UserInfo.m */; };
+		34768F9D1FD538FB00998AD7 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34768F9C1FD538FA00998AD7 /* UserManager.m */; };
 		34AC3D201FC80FFE008AF6C6 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D1F1FC80FFE008AF6C6 /* MeViewController.m */; };
 		34AC3D241FC81196008AF6C6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D231FC81196008AF6C6 /* BaseViewController.m */; };
 		34AC3D271FC813F0008AF6C6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D261FC813F0008AF6C6 /* ProfileViewController.m */; };
-		34AC3D2A1FC81416008AF6C6 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D291FC81416008AF6C6 /* SetViewController.m */; };
 		34AC3D2F1FC816DF008AF6C6 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D2E1FC816DF008AF6C6 /* MeTableViewCell.m */; };
 		34AC3D321FC81709008AF6C6 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AC3D311FC81709008AF6C6 /* HeaderView.m */; };
 		34C67C281FC80602007AAB63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C67C271FC80602007AAB63 /* HomeViewController.m */; };
@@ -56,11 +58,17 @@
 		342C72271F8BC64800A957BC /* YHTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBar.m; sourceTree = "<group>"; };
 		342C72411F95026000A957BC /* YHTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTabBarItem.h; sourceTree = "<group>"; };
 		342C72421F95026000A957BC /* YHTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTabBarItem.m; sourceTree = "<group>"; };
+		3441E81B1FD695E000FE76C6 /* SetingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetingViewController.h; sourceTree = "<group>"; };
+		3441E81C1FD695E000FE76C6 /* SetingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetingViewController.m; sourceTree = "<group>"; };
 		34768F8F1FC9603700998AD7 /* BaseUINavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseUINavigationController.h; sourceTree = "<group>"; };
 		34768F901FC9603700998AD7 /* BaseUINavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseUINavigationController.m; sourceTree = "<group>"; };
 		34768F931FCE89E000998AD7 /* YHAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnimatedTransition.h; sourceTree = "<group>"; };
 		34768F941FCE89E000998AD7 /* YHAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnimatedTransition.m; sourceTree = "<group>"; };
 		34768F961FCEB95B00998AD7 /* YHTransitonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTransitonProtocol.h; sourceTree = "<group>"; };
+		34768F981FD5312600998AD7 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		34768F991FD5312600998AD7 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		34768F9B1FD538FA00998AD7 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		34768F9C1FD538FA00998AD7 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		34AC3D1C1FC80F5F008AF6C6 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		34AC3D1D1FC80F5F008AF6C6 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		34AC3D1E1FC80FFE008AF6C6 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -69,8 +77,6 @@
 		34AC3D231FC81196008AF6C6 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		34AC3D251FC813F0008AF6C6 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		34AC3D261FC813F0008AF6C6 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		34AC3D281FC81416008AF6C6 /* SetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
-		34AC3D291FC81416008AF6C6 /* SetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		34AC3D2D1FC816DF008AF6C6 /* MeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
 		34AC3D2E1FC816DF008AF6C6 /* MeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeTableViewCell.m; sourceTree = "<group>"; };
 		34AC3D301FC81709008AF6C6 /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			children = (
 				341BDF471F80F30D00D23D90 /* AppDelegate */,
 				34AC3D171FC80E57008AF6C6 /* Base */,
+				34768F971FD530A700998AD7 /* UserManager */,
 				34C67C361FC80779007AAB63 /* Utils */,
 				341BDF5E1F82670A00D23D90 /* Macro */,
 				341BDF4A1F8133B700D23D90 /* Modules */,
@@ -243,6 +250,17 @@
 			path = AnimatedTransition;
 			sourceTree = "<group>";
 		};
+		34768F971FD530A700998AD7 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				34768F981FD5312600998AD7 /* UserInfo.h */,
+				34768F991FD5312600998AD7 /* UserInfo.m */,
+				34768F9B1FD538FA00998AD7 /* UserManager.h */,
+				34768F9C1FD538FA00998AD7 /* UserManager.m */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
 		34AC3D171FC80E57008AF6C6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,8 +287,8 @@
 				34AC3D1F1FC80FFE008AF6C6 /* MeViewController.m */,
 				34AC3D251FC813F0008AF6C6 /* ProfileViewController.h */,
 				34AC3D261FC813F0008AF6C6 /* ProfileViewController.m */,
-				34AC3D281FC81416008AF6C6 /* SetViewController.h */,
-				34AC3D291FC81416008AF6C6 /* SetViewController.m */,
+				3441E81B1FD695E000FE76C6 /* SetingViewController.h */,
+				3441E81C1FD695E000FE76C6 /* SetingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34768F951FCE89E000998AD7 /* YHAnimatedTransition.m in Sources */,
+				34768F9D1FD538FB00998AD7 /* UserManager.m in Sources */,
 				342C72171F84DCB500A957BC /* YHAdPagesView.m in Sources */,
 				34AC3D2F1FC816DF008AF6C6 /* MeTableViewCell.m in Sources */,
 				342C72281F8BC64800A957BC /* YHTabBar.m in Sources */,
@@ -483,15 +502,16 @@
 				341BDF321F80DC2900D23D90 /* AppDelegate.m in Sources */,
 				34AC3D271FC813F0008AF6C6 /* ProfileViewController.m in Sources */,
 				34768F911FC9603700998AD7 /* BaseUINavigationController.m in Sources */,
+				34768F9A1FD5312600998AD7 /* UserInfo.m in Sources */,
 				34C67C391FC8094A007AAB63 /* FindTableViewController.m in Sources */,
 				342C72221F8A74AE00A957BC /* YHTabBarViewController.m in Sources */,
 				34AC3D321FC81709008AF6C6 /* HeaderView.m in Sources */,
 				341BDF711F82867D00D23D90 /* NSString+Base64.m in Sources */,
-				34AC3D2A1FC81416008AF6C6 /* SetViewController.m in Sources */,
 				342C72431F95026000A957BC /* YHTabBarItem.m in Sources */,
 				34AC3D201FC80FFE008AF6C6 /* MeViewController.m in Sources */,
 				34AC3D241FC81196008AF6C6 /* BaseViewController.m in Sources */,
 				342C721A1F89E62B00A957BC /* AppDelegate+AppSever.m in Sources */,
+				3441E81D1FD695E000FE76C6 /* SetingViewController.m in Sources */,
 				34C67C281FC80602007AAB63 /* HomeViewController.m in Sources */,
 				34C67C351FC806FB007AAB63 /* WKViewController.m in Sources */,
 			);

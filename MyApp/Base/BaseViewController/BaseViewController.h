@@ -9,7 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
+/**
+ *  修改状态栏颜色
+ */
+@property (nonatomic, assign) UIStatusBarStyle StatusBarStyle;
 
-@property (nonatomic,assign) BOOL isHidenNavBar;
+
+@property (nonatomic, strong) UITableView * tableView;
+@property (nonatomic, strong) UICollectionView * collectionView;
+/**
+ 是否隐藏导航栏
+ */
+@property (nonatomic, assign) BOOL isHidenNaviBar;
+/*是否显示返回按钮
+ */
+@property (nonatomic,assign) BOOL isShowLiftBack;
 
 @end
