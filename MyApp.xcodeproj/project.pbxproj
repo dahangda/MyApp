@@ -47,7 +47,6 @@
 		342AD14E1F82988A00EFBAF2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		342AD1501F829B8F00EFBAF2 /* URLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacro.h; sourceTree = "<group>"; };
 		342AD1511F829C2D00EFBAF2 /* ThirdMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdMacro.h; sourceTree = "<group>"; };
-		342AD1521F83DBCB00EFBAF2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		342C72151F84DCB500A957BC /* YHAdPagesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAdPagesView.h; sourceTree = "<group>"; };
 		342C72161F84DCB500A957BC /* YHAdPagesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAdPagesView.m; sourceTree = "<group>"; };
 		342C72181F89E62A00A957BC /* AppDelegate+AppSever.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppSever.h"; sourceTree = "<group>"; };
@@ -108,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				341BDF2F1F80DC2900D23D90 /* MyApp */,
-				342AD1521F83DBCB00EFBAF2 /* Podfile */,
 				341BDF2E1F80DC2900D23D90 /* Products */,
 				BF91FE86FBBF08F564AD0F5E /* Pods */,
 				B9276060F8F6FD5720817A22 /* Frameworks */,
@@ -641,10 +639,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 57767VFS85;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyApp/Supporting Flie/PrefixHeader.pch";
 				INFOPLIST_FILE = "MyApp/Supporting Flie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yhpantanty.bool-part.MyApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,10 +657,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 57767VFS85;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyApp/Supporting Flie/PrefixHeader.pch";
 				INFOPLIST_FILE = "MyApp/Supporting Flie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yhpantanty.bool-part.MyApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

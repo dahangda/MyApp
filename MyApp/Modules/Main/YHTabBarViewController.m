@@ -82,7 +82,7 @@
     _Controllers = [[NSMutableArray alloc]init];
     
     HomeViewController *home = [[HomeViewController alloc]init];
-    [self  configChildContrller:home tittile:@"首页" tabBarItemImage:(NSString *)@"tabBar_essence_click_icon" itemSelImage:@"tabBar_essence_icon"];
+    [self  configChildContrller:home tittile:@"首页" tabBarItemImage:(NSString *)@"tabBar_essence_icon" itemSelImage:@"tabBar_essence_click_icon"];
     
     WKViewController *web = [[WKViewController alloc]init];
     [self configChildContrller:(UIViewController *)web tittile: @"灵感"tabBarItemImage:@"tabbar_icon_found_normal" itemSelImage:@"tabbar_icon_found_highlight"];
@@ -146,9 +146,10 @@
 {
   YHTabBarItem *selectItem = self.TabBar.items[to-1];
     YHTabBarItem *fromItem = self.TabBar.items[from -1];
-    selectItem.userInteractionEnabled=NO;
+    selectItem.userInteractionEnabled = NO;
     fromItem.userInteractionEnabled = YES;
     self.selectedIndex = to-1;
+    YHLog(@"-----%f-----",self.selectedIndex);
     
 }
 

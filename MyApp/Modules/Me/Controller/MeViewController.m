@@ -13,7 +13,7 @@
 #import "SetingViewController.h"
 #import "UserManager.h"
 
-//#define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
+#define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
 //#define isLogin [UserManager sharedUserManager].isLogined
 //#define curUser [UserManager sharedUserManager].curUserInfo
 //#define userManager [UserManager sharedUserManager]

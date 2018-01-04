@@ -1,6 +1,6 @@
 //
 //  AppDelegate+AppSever.m
-//  MyApp
+//
 //
 //  Created by 燕航 on 2017/10/8.
 //  Copyright © 2017年 yanhang. All rights reserved.

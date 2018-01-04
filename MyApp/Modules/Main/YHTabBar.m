@@ -76,14 +76,17 @@
     // 响应代理方法 实现页面跳转
     if ([self.delegate respondsToSelector:@selector(ChangeSelectIndexFrom:to:)]) {
         [self.delegate ChangeSelectIndexFrom:self.selItem.tag to:btn.tag];
+        btn.selected = YES;
+         self.selItem.selected =NO;
+         self.selItem = btn;
     }
     
     // 设置按钮显示状态 并切换选中按钮
-      btn.selected = YES;
+//      btn.selected = YES;
     
     //_selItem.enabled = YES;
-    self.selItem.selected =NO;
-    self.selItem = btn;
+   
+//    self.selItem = btn;
     //btn.enabled = NO;
   
   
